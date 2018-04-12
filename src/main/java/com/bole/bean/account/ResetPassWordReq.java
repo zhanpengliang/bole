@@ -1,13 +1,8 @@
-package com.bole.bean.candidate.accountInfo;
+package com.bole.bean.account;
 
 import com.bole.bean.BaseRequest;
 
-public class RegisterReq extends BaseRequest {
-    /**
-     * 昵称，可修改
-     */
-    private String nickName;
-
+public class ResetPassWordReq extends BaseRequest {
     /**
      * 登陆密码
      */
@@ -37,14 +32,6 @@ public class RegisterReq extends BaseRequest {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
     }
 
     public String getPassWord() {

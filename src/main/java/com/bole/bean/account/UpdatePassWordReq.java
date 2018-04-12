@@ -1,4 +1,4 @@
-package com.bole.bean.candidate.accountInfo;
+package com.bole.bean.account;
 
 import com.bole.bean.BaseRequest;
 

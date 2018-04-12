@@ -2,8 +2,17 @@ package com.bole.bean;
 
 public class BaseResponse {
 
+    /**
+     * true：成功；false：失败
+     */
     private boolean status;
+    /**
+     * 错误码
+     */
     private String errorCode;
+    /**
+     * 错误信息
+     */
     private String errorMsg;
 
     public boolean isStatus() {

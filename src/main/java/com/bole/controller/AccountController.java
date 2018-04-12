@@ -1,15 +1,15 @@
-package com.bole.controller.candidate;
+package com.bole.controller;
 
 import com.bole.bean.BaseResponse;
-import com.bole.bean.candidate.accountInfo.AccountBaseInfoRes;
-import com.bole.bean.candidate.accountInfo.*;
+import com.bole.bean.account.AccountInfo;
+import com.bole.bean.account.*;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * 账号控制器
  */
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/account")
 public class AccountController {
 
     /*后续要做
@@ -37,7 +37,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
-    private AccountBaseInfoRes register(@RequestBody RegisterReq registerReq) {
+    private AccountInfo register(@RequestBody RegisterReq registerReq) {
         return null;
     }
 
@@ -51,7 +51,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    private AccountBaseInfoRes login(@RequestBody LoginReq loginReq) {
+    private AccountInfo login(@RequestBody LoginReq loginReq) {
         return null;
     }
 
@@ -62,7 +62,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/resetPassWord", method = RequestMethod.POST)
     @ResponseBody
-    private AccountBaseInfoRes resetPassWord(@RequestBody ResetPassWordReq resetPassWordReq) {
+    private AccountInfo resetPassWord(@RequestBody ResetPassWordReq resetPassWordReq) {
         return null;
     }
 

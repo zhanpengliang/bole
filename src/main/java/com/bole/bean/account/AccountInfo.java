@@ -1,8 +1,8 @@
-package com.bole.bean.candidate.accountInfo;
+package com.bole.bean.account;
 
 import com.bole.bean.BaseResponse;
 
-public class AccountBaseInfoRes extends BaseResponse {
+public class AccountInfo extends BaseResponse {
     /**
      * 昵称
      */
@@ -11,7 +11,7 @@ public class AccountBaseInfoRes extends BaseResponse {
     /**
      * 用户ID
      */
-    private String userId;
+    private Long userID;
 
     public String getNickName() {
         return nickName;
@@ -21,11 +21,11 @@ public class AccountBaseInfoRes extends BaseResponse {
         this.nickName = nickName;
     }
 
-    public String getUserId() {
-        return userId;
+    public Long getUserID() {
+        return userID;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserID(Long userID) {
+        this.userID = userID;
     }
 }
