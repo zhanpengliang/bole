@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/job")
-public class JobController {
+public class JDController {
 
     //todo
     //岗位 增、删、改的操作  第一版不做  公司操作

@@ -27,9 +27,7 @@ public class AccountController {
         return null;
     }
 
-
     /**
-     * 注册页面
      *
      * 注册
      * @param registerReq
@@ -43,7 +41,6 @@ public class AccountController {
 
 
     /**
-     * 登陆页面
      *
      * 登陆
      * @param loginReq
