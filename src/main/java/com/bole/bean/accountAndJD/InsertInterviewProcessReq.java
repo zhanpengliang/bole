@@ -1,12 +1,8 @@
 package com.bole.bean.accountAndJD;
 
-import java.util.Date;
+import com.bole.bean.BaseRequest;
 
-public class InterviewProcessInfo {
-    /**
-     * 投递时间
-     */
-    private Date deliveredTime;
+public class InsertInterviewProcessReq extends BaseRequest {
     /**
      * 面试进程  详见枚举 InterviewProcessEnum
      */
@@ -24,13 +20,6 @@ public class InterviewProcessInfo {
      */
     private String interviewComment;
 
-    public Date getDeliveredTime() {
-        return deliveredTime;
-    }
-
-    public void setDeliveredTime(Date deliveredTime) {
-        this.deliveredTime = deliveredTime;
-    }
 
     public String getInterviewProcess() {
         return interviewProcess;
