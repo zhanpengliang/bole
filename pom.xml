@@ -4,14 +4,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>init</groupId>
-  <artifactId>maven-spring-mybatis</artifactId>
+  <groupId>bole</groupId>
+  <artifactId>bole</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <properties>
     <spring.version>5.0.5.RELEASE</spring.version>
     <jackson.version>2.9.5</jackson.version>
+    <log4j2.version>2.11.0</log4j2.version>
+    <slf4j.version>1.7.25</slf4j.version>
   </properties>
 
   <dependencyManagement>
@@ -91,7 +93,44 @@
         <version>1.1.9</version>
       </dependency>
       <!--数据库连接池-->
+
+      <!--slf4j 与 log4j配置日志系统  start-->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-api</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-core</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-web</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <!--slf4j 与 log4j2的桥接-->
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-slf4j-impl</artifactId>
+        <version>${log4j2.version}</version>
+      </dependency>
+      <!--LOG4J2异步appender需要引入的jar-->
+      <dependency>
+        <groupId>com.lmax</groupId>
+        <artifactId>disruptor</artifactId>
+        <version>3.4.2</version>
+      </dependency>
+      <!--slf4j 与 log4j配置日志系统  end-->
     </dependencies>
+
   </dependencyManagement>
 
   <dependencies>
@@ -158,10 +197,39 @@
       <artifactId>druid</artifactId>
     </dependency>
     <!--数据库连接池-->
+
+    <!--slf4j 与 log4j配置日志系统  start-->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+    </dependency>
+    <!--LOG4J2异步appender需要引入的jar-->
+    <dependency>
+      <groupId>com.lmax</groupId>
+      <artifactId>disruptor</artifactId>
+    </dependency>
+    <!--slf4j 与 log4j配置日志系统  end-->
   </dependencies>
 
   <build>
-    <finalName>maven-spring-mybatis</finalName>
+    <finalName>bole</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="INFO">
+    <appenders>
+        <!--MainLog-->
+        <RollingRandomAccessFile name="mainLogFile" fileName="/Users/zhanpengliang/logs/main.log"
+                                 immediateFlush="false"
+                                 filePattern="/Users/zhanpengliang/logs/main.%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} ${sys:app.host} ${sys:app.key} [%p] %t %c{1} %m%n" charset="UTF-8"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="1024 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="14"/>
+        </RollingRandomAccessFile>
+    </appenders>
+
+    <loggers>
+        <root level="info">
+            <appender-ref ref="mainLogFile"/>
+        </root>
+    </loggers>
+</configuration>
