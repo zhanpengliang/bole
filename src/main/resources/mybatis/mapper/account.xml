@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bole.dao.AccountDao">
+
+    <!-- useGeneratedKeys="true"把新增加的主键赋值到自己定义的keyProperty（id）中 -->
+    <insert id="insertAccount" parameterType="com.bole.model.AccountModel" useGeneratedKeys="true" keyProperty="id">
+        insert into account (nickName, phoneNumer, passWord, accountType)
+        values (#{accountModel.nickName}, #{accountModel.phoneNumer}, #{accountModel.passWord}, #{accountModel.accountType})
+    </insert>
+
+</mapper>

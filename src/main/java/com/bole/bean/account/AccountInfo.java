@@ -3,15 +3,16 @@ package com.bole.bean.account;
 import com.bole.bean.BaseResponse;
 
 public class AccountInfo extends BaseResponse {
-    /**
-     * 昵称
-     */
-    private String nickName;
 
     /**
      * 用户ID
      */
-    private Long userID;
+    private Long id;
+
+    /**
+     * 昵称
+     */
+    private String nickName;
 
     public String getNickName() {
         return nickName;
@@ -21,11 +22,11 @@ public class AccountInfo extends BaseResponse {
         this.nickName = nickName;
     }
 
-    public Long getUserID() {
-        return userID;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserID(Long userID) {
-        this.userID = userID;
+    public void setId(Long id) {
+        this.id = id;
     }
 }

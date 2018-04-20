@@ -3,18 +3,25 @@ package com.bole.controller;
 import com.bole.bean.BaseResponse;
 import com.bole.bean.account.AccountInfo;
 import com.bole.bean.account.*;
+import com.bole.service.AccountService;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * 账号控制器
  */
-@RestController
+@Controller
 @RequestMapping("/account")
 public class AccountController {
 
     /*后续要做
     1. 更新绑定的手机号
     2. 查询账号信息*/
+
+    @Resource
+    private AccountService accountService;
 
     /**
      * 根据电话号码得到验证码
@@ -36,7 +43,7 @@ public class AccountController {
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
     private AccountInfo register(@RequestBody RegisterReq registerReq) {
-        return null;
+        return accountService.register(registerReq);
     }
 
 
